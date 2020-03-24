@@ -6,6 +6,7 @@
  */
 
 import * as React from "react";
+import "./ContactView.css";
 
 export interface ContactViewProps {
 
@@ -26,8 +27,11 @@ export class ContactView extends React.Component<ContactViewProps, ContactViewSt
 
 	public render(): React.ReactElement {
 
-		return (<div>
-			<p>/contact</p>
+		return (<div className={"contact"} style={{backgroundImage: `url("./img/tree.jpg")`}}>
+			<div className={"container"}>
+				<img src={"./img/laura.jpg"} alt={"laura"}/>
+				<h2>Laura Cobb</h2>
+			</div>
 		</div>);
 
 	}

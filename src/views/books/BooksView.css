@@ -1,0 +1,38 @@
+.books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 210px;
+}
+.books a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.books img {
+  width: 80%;
+  box-shadow: 5px 5px 20px black;
+  display: block;
+}
+
+@media (min-width: 1080px) {
+  .books {
+    margin-top: 10vh;
+    align-items: flex-start;
+    padding: 40px;
+  }
+  .books a {
+    width: 20vw;
+  }
+  .books img {
+    width: 100%;
+    transition: transform 250ms ease-in-out;
+  }
+  .books img:hover {
+    transform: scale(1.1);
+  }
+}
+
+/*# sourceMappingURL=BooksView.css.map */

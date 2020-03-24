@@ -1,0 +1,97 @@
+.poemDetailView {
+
+	width: 100vw;
+	background: white;
+
+	img {
+		margin-top: 180px;
+		width: 100%;
+		height: 220px;
+		object-fit: cover;
+	}
+
+	.container {
+		padding: 20px;
+		margin-bottom: 40px;
+	}
+
+	.closeButton {
+		background: white;
+		border-radius: 20px;
+		position: fixed;
+		top: 220px;
+		left: 20px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 10px 10px 20px black;
+	}
+
+
+
+}
+
+@media (min-width: 1080px) {
+	.poemDetailView {
+
+		.closeButton {
+			transition: transform 250ms ease-in-out;
+			top: 14vh;
+			left: 4vh;
+			z-index: 3;
+		}
+
+		.closeButton:hover {
+			cursor: pointer;
+			transform: scale(1.25);
+		}
+
+		img {
+			height: 84vh;
+			position: fixed;
+			top: 10vh;
+			margin-top: 0;
+		}
+
+		.container {
+			border-radius: 40px;
+			box-shadow: 0 0 40px black;
+			background: rgba(0,0,0,0.85);
+			top: 72vh;
+			width: 60vw;
+			margin-left: 20vw;
+			height: unset;
+			position: absolute;
+			padding: 40px 40px 10vh;
+		}
+
+		h2, h3, .paragraph {
+			color: white;
+		}
+
+		h2 {
+			margin-bottom: 40px;
+			font-size: 2.5em;
+			text-align: center;
+			text-transform: capitalize;
+		}
+
+		h3 {
+			text-align: center;
+			text-transform: capitalize;
+			font-weight: lighter;
+			margin-bottom: 6px;
+		}
+
+		.paragraph {
+			margin-bottom: 48px;
+		}
+
+		p {
+			font-size: 1.5em;
+			text-align: center;
+		}
+	}
+}

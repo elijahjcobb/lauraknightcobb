@@ -1,0 +1,51 @@
+.poem {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 5vw;
+  border: solid gray 1px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  overflow: hidden;
+}
+.poem .background {
+  filter: blur(2px);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.poem .container {
+  top: -100%;
+  position: relative;
+  background: rgba(1, 1, 1, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.poem span {
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.poem:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1080px) {
+  .poem {
+    width: 24vw;
+    transition: transform 250ms ease-in-out;
+    margin: 20px;
+  }
+
+  .poem:hover {
+    transform: scale(1.1);
+  }
+}
+
+/*# sourceMappingURL=VerseCellView.css.map */

@@ -6,6 +6,7 @@
  */
 
 import * as React from "react";
+import "./BooksView.css";
 
 export interface BooksViewProps {
 
@@ -26,8 +27,10 @@ export class BooksView extends React.Component<BooksViewProps, BooksViewState> {
 
 	public render(): React.ReactElement {
 
-		return (<div>
-			<p>/books</p>
+		return (<div className={"books"}>
+			<a target={"_blank"} href={"http://lessonofthelark.com"} rel={"noopener noreferrer"}>
+				<img src={"http://lessonofthelark.com/img/cover.jpeg"} alt={"lesson of the lark"}/>
+			</a>
 		</div>);
 
 	}

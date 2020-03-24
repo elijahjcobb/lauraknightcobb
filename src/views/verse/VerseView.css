@@ -1,0 +1,21 @@
+.poems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  justify-content: flex-start;
+  padding-bottom: 8vw;
+  margin: 220px 5vw 5vw;
+}
+
+@media (min-width: 1080px) {
+  .poems {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 0;
+    margin: 15vh 5vw 5vw;
+  }
+}
+
+/*# sourceMappingURL=VerseView.css.map */
