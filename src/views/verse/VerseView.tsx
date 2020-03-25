@@ -8,7 +8,7 @@
 import * as React from "react";
 import {VerseCellView} from "./VerseCellView";
 import "./VerseView.css";
-import {VerseDetailView} from "../verse/VerseDetailView";
+import {VerseDetailView} from "./VerseDetailView";
 import {Verse} from "../../objects/Verse";
 
 export interface PoemsViewProps {
@@ -42,6 +42,12 @@ export class VerseView extends React.Component<PoemsViewProps, PoemsViewState> {
 	private handleClose(): void {
 
 		this.setState({currentPoem: undefined});
+
+	}
+
+	public componentWillUnmount(): void {
+
+		this.handleClose();
 
 	}
 

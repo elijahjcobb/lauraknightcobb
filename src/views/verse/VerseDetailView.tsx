@@ -49,7 +49,7 @@ export class VerseDetailView extends React.Component<PoemDetailViewProps, PoemDe
 				<h2>{this.props.poem.name}</h2>
 				{this.props.poem.content.map((paragraph: (string[] | {title: string, lines: string[]})) => {
 					if (Array.isArray(paragraph)) {
-						return <div className={"paragraph"}>
+						return <div key={this.i++} className={"paragraph"}>
 							{
 								paragraph.map((line: string) => {
 									return <p key={this.i++}>{line}</p>;

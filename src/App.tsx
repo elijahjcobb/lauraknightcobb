@@ -14,14 +14,14 @@ import {VerseView} from "./views/verse/VerseView";
 import {ContactView} from "./views/contact/ContactView";
 import {NavigationMenuView} from "./views/navigation/NavigationMenuView";
 import {FooterView} from "./views/footer/FooterView";
-import {lyrics, poems, Verse} from "./objects/Verse";
+import {lyrics, poems} from "./objects/Verse";
 
 export interface AppProps {
 
 }
 
 export interface AppState {
-	currentVerse?: Verse;
+	currentPage: string;
 }
 
 export class App extends React.Component<AppProps, AppState> {
@@ -30,19 +30,21 @@ export class App extends React.Component<AppProps, AppState> {
 
 		super(props);
 
-		this.state = {};
-		this.setVerse = this.setVerse.bind(this);
+		this.state = {currentPage: "/"};
+		this.pageChanged = this.pageChanged.bind(this);
 
 	}
 
-	private setVerse(verse: Verse | undefined): void {
-		this.setState({currentVerse: verse});
+	private pageChanged(url: string): void {
+
+		this.setState({currentPage: url});
+
 	}
 
 	public render(): React.ReactElement {
 
 		return (<Router>
-			<NavigationMenuView/>
+			<NavigationMenuView pageChanged={this.pageChanged}/>
 			<div className={"mainApp"}>
 				<Switch>
 					<Route path="/books"><BooksView/></Route>

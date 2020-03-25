@@ -10,7 +10,7 @@ import * as React from "react";
 import {NavigationMenuItemView} from "./NavigationMenuItemView";
 
 export interface NavigationMenuViewProps {
-
+	pageChanged(url: string): void;
 }
 
 export interface NavigationMenuViewState {
@@ -32,6 +32,7 @@ export class NavigationMenuView extends React.Component<NavigationMenuViewProps,
 
 		console.log(url + " clicked!");
 		this.setState({activePage: url});
+		this.props.pageChanged(url);
 
 	}
 
